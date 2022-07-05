@@ -1,0 +1,641 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    background: rgba(175, 174, 171, 1);
+    min-width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+header{
+    width: 100vw;
+    height: 150px;
+    background: #f2c928;
+    border: 2px solid black;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#batmanPosando{
+    width: 150px;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+    font-weight: bold;
+    font-size: 70px;
+    text-shadow: 3px 3px 4px rgb(238, 235, 235);
+}
+
+main{
+    width: 95vw;
+    height: 1300px;
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 30px;
+    overflow: hidden;
+    background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(249,176,39,1) 45%, rgba(255,145,0,1) 100%);
+    background-size: cover;
+}
+
+@media only screen and (max-width: 780px){
+main{
+    width: 100vw;
+    height: 1300px;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 30px;
+    background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(249,176,39,1) 45%, rgba(255,145,0,1) 100%);
+    background-size: cover;
+    overflow: hidden;
+}
+}
+
+#capa{
+    width: 280px;
+    height: 280px;
+    position: relative;
+    transform: translate(-50%);
+    left: 50%;
+}
+
+#original{
+    position: relative;
+    left: -260px;
+    width: 200%;
+    animation-name: Original;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes Original {
+    0%{transform: translate(-10px);}
+    50%{transform: translate(10px);}
+    100%{transform: translate(-10px);}
+}
+
+#reflejada{
+    position: absolute;
+    right: -260px;
+    width: 200%;
+    top: 0%;
+    animation-name: Reflejada;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes Reflejada {
+    0%{transform: translate(7px);}
+    50%{transform: translate(-7px);}
+    100%{transform: translate(7px);}
+}
+
+#cabeza{
+    width: 250px;
+    height: 360px;
+    position: relative;
+    transform: translate(-50%);
+    left: 50%;
+    margin: 100px 0px 0px;
+}
+
+#imgCabeza{
+    width: 250px;
+    position: relative;
+    bottom: 0px;
+}
+
+#ojoizq{
+    width: 50px;
+    height: 18px;
+    background: rgb(62, 195, 248);
+    position: absolute;
+    left: 54px;
+    top: 204px;
+    z-index: 1;
+    border-radius: 100%;
+    box-shadow: 0 0 30px  rgb(0, 225, 255);
+    animation-name: Ojo;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+#ojoder{
+    width: 50px;
+    height: 18px;
+    background: rgb(62, 195, 248);
+    position: absolute;
+    left: 145px;
+    top: 204px;
+    z-index: 1;
+    border-radius: 100%;
+    box-shadow: 0 0 30px  rgb(0, 225, 255);
+    animation-name: Ojo;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes Ojo {
+    0%{opacity: 100%;}
+    50%{opacity: 40%;}
+    100%{opacity: 100%;}
+}
+#cuerpo{
+    width: 280px;
+    height: 280px;
+    position: relative;
+    transform: translate(-50%);
+    left: 50%;
+    top: -280px;
+    background: grey;
+    border: 1px solid black;
+    border-radius: 10%;
+    z-index: 2;
+}
+
+#abdominales{
+    border: 0;
+    width: 200px;
+    height: 98px;
+    position: relative;
+    transform: translate(-50%);
+    left: 50%;
+    bottom: -140px;
+}
+
+#abdominales td {
+    border: 2px solid black;
+    position: relative;
+    border-radius: 40%;
+}
+
+#logo{
+    width: 80%;
+    position: relative;
+    left: 31px;
+    bottom: 138px;
+    animation-name: logo;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes logo {
+    0%{transform: scale(100%);}
+    50%{transform: scale(105%);}
+    100%{transform: sacale(100%);}
+}
+
+
+#brazoIzq{
+    width: 50px;
+    height: 150px;
+    position: relative;
+    left: -90px;
+    bottom: 840px; 
+    background: grey;
+    border: 1px solid black;
+    border-radius: 10%;
+    transform: rotate(75deg);
+}
+
+#codoIzq{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: black;
+    position: relative;
+    top: 125px;
+    transform: rotate(90deg);
+    animation-name: Codo;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes Codo {
+    50%{transform: rotate(110deg);}
+    100%{transform: rotate(90px);}
+}
+
+#codoIzq2{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: grey;
+    position: relative;
+    top: 75px;
+    z-index: 1;
+}
+
+#antebrazoIzq{
+    width: 50px;
+    height: 150px;
+    position: relative;
+    top: 25px; 
+    background: grey;
+    border: 1px solid black;
+    border-radius: 10%;
+    z-index: 0;
+}
+
+#brazoDer{
+    width: 50px;
+    height: 150px;
+    position: relative;
+    left: 285px;
+    bottom: 950px;
+    background: grey;
+    border: 1px solid black;
+    border-radius: 10%;
+}
+
+#codoDer{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: black;
+    position: relative;
+    top: 125px;
+}
+
+#antebrazoDer{
+    width: 50px;
+    height: 150px;
+    position: relative;
+    top: 15px; 
+    background: grey;
+    border: 1px solid black;
+    border-radius: 10%;
+}
+
+#codoDer2{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: grey;
+    position: relative;
+    top: 75px;
+    z-index: 1;
+}
+
+#manoIzq, #manoDer{
+    width: 80px;
+    height: 70px;
+    position: absolute;
+    bottom: -50px;
+    border-radius: 50%;
+    left: -15px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: rgb(0, 0, 0);
+    border: 1px solid black;
+}
+
+#palmaIzq{
+    width: 50px;
+    height: 52px;
+    position: relative;
+    bottom: -20px;
+    border-radius: 40%;
+    left: 14px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background:  rgba(249,176,39,1) 45%;
+}
+
+#palmaDer{
+    width: 50px;
+    height: 80px;
+    position: relative;
+    bottom: -20px;
+    border-radius: 40%;
+    left: 14px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: rgb(49, 49, 49);
+}
+
+#piernaIzq{
+    width: 120px;
+    height: 220px;
+    position: relative;
+    bottom: 50px;
+    background: grey;
+    border: 1px solid black;
+    border-radius: 10%;
+}
+
+#piernaDer{
+    width: 120px;
+    height: 220px;
+    position: relative;
+    bottom: 270px;
+    left: 160px;
+    background: grey;
+    border: 1px solid black;
+    border-radius: 10%;
+}
+
+#pieIzq, #pieDer{
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    bottom: -80px;
+    border-radius: 50%;
+    left: -20px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: rgb(0, 0, 0);
+    border: 1px solid black;
+}
+
+#Cinturon{
+    width: 280px;
+    height: 50px;
+    position: relative;
+    bottom: 520px;
+    background: yellow;
+    border: 1px solid black;
+}
+
+#cinturonIzq{
+    width: 90px;
+    height: 70px;
+    background: yellow;
+    position: relative;
+    top: -10px;
+    border: 1px solid black;
+}
+
+#cinturonCen{
+    width: 60px;
+    height: 70px;
+    background: yellow;
+    position: relative;
+    transform: translate(-50%);
+    left: 50%;
+    bottom: 82px;
+    border: 1px solid black;
+}
+
+#cinturonDer{
+    width: 90px;
+    height: 70px;
+    background: yellow;
+    position: relative;
+    bottom: 154px;
+    left: 188px;
+    border: 1px solid black;
+}
+
+#etiqueta{
+    width: 400px;
+    position: absolute;
+    top: 215px;
+    left: 78px;
+    z-index: 5;
+}
+
+#etiqueta:hover{
+    transform: rotate(720deg) scale(1.3);
+    transition: 1s;
+}
+
+#dialogo{
+    position: relative;
+    left: 300px;
+    top: -400px;
+    width: 400px;
+}
+
+audio{
+    position: relative;
+    left: 345px;
+    top: -670px;
+}
+
+#reflectorder{
+    width: 10px;
+    height: 10px;
+    position: relative;
+    top: 1300px;
+    z-index: 3;
+    animation-name: reflectorder;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    rotate: 90deg;
+}
+
+@keyframes reflectorder{
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(45deg);}
+    100%{transform: rotate(0deg);}
+}
+
+#trianguloder{
+    width: 0;
+    height: 0;
+    position: relative;
+    bottom: 2000px;
+    border-top: 3000px solid rgb(158, 158, 252);
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    opacity: 21%;
+}
+
+#reflectorizq{
+    width: 10px;
+    height: 10px;
+    position: relative;
+    top: 1300px;
+    left: 65vw;
+    z-index: 3;
+    animation-name: reflectorizq;
+    animation-duration: 3.5s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    rotate: 90deg;
+}
+
+@keyframes reflectorizq{
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(-45deg);}
+    100%{transform: rotate(0deg);}
+}
+
+#trianguloizq{
+    width: 0;
+    height: 0;
+    position: relative;
+    bottom: 2000px;
+    border-top: 3000px solid rgb(158, 158, 252);
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    opacity: 21%;
+}
+
+
+#glass{
+    width: 95vw;
+    height: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    margin-top: 2em;
+    border-radius: 30px;
+    background: rgb(195,195,195);
+background: linear-gradient(122deg, rgba(195,195,195,1) 19%, rgba(255,255,255, 1) 24%, rgba(190,190,190, 1) 29%, rgba(203,203,203,1) 33%, rgba(255,255,255,1) 35%, rgba(204,204,204,1) 38%, rgba(181,181,181,1) 100%);
+    background-size: cover;
+    z-index: 4;
+    position: absolute;
+    top: 143px;
+    opacity: 97%;
+    animation-name: glass;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes glass{
+    100%{transform: translate(120vw, 0) rotate(15deg);}
+}
+
+#podio{
+    width: 1300px;
+    position: relative;
+    bottom: 200px;
+    z-index: 1;
+    margin: auto;
+    transform: translate(-50%);
+    left: 50%;
+
+}
+
+#spotify{
+    width: 120px;
+    position: relative;
+    z-index: 3;
+    bottom: 455px;
+    margin-left: 89%;
+    border-radius: 80%;
+}
+
+#spotify:hover{
+    box-shadow: 0 0 50px rgb(0, 255, 0);
+    transition-duration: 0.5s;
+}
+
+footer{
+    margin-top: 4em;
+    width: 93vw;
+    height: 200px;
+    background-color: rgb(67, 67, 68);
+    border: 2px solid black;
+    box-shadow: 0px -3px 50px yellow;
+    position: relative;
+    left: 7vw;
+}
+
+#tablafooter{
+    width: 1220px;
+    height: 100px;
+    border-collapse: collapse;
+    font-size: 0px;
+    line-height: 40px;
+    position: absolute;
+    left: 170px;
+    bottom: -20px;
+}
+
+#conti{
+    width: 219px;
+    font-size: 0px;
+    position: relative;
+    bottom: 13px;
+    left: -84px;
+    border-radius: 50%;
+    box-shadow: 0px -3px 200px yellow;
+    animation-name: Conti;
+    animation-duration: 3.3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes Conti {
+    0%{box-shadow: 0px -3px 50px yellow;}
+    50%{box-shadow: 0px -3px 50px red;}
+    100%{box-shadow: 0px -3px 50px yellow;}
+}
+
+#nombre{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    position: relative;
+    top: 0px;
+}
+
+#profesion{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    position: relative;
+    bottom: 5px;
+}
+
+#logogirando{
+    width: 80px;
+    position: relative;
+    top: 10px;
+}
+
+#saludo{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    position: relative;
+    bottom: 10px;
+}
+
+#ig{
+    font-size: 0px;
+    width: 45px;
+    position: relative;
+    bottom: 10px;
+    border-radius: 80%;
+}
+
+#ig:hover{
+    box-shadow: 0 0 20px rgb(236, 29, 157);
+    transition-duration: 0.5s;
+}
+
+#fb{
+    font-size: 0px;
+    width: 49px;
+    position: relative;
+    left: -240px;
+    bottom: 10px;
+    border-radius: 80%;
+}
+
+#fb:hover{
+    box-shadow: 0 0 20px rgb(26, 173, 231);
+    transition-duration: 0.5s;
+}
+
+#derechos{
+    width: 59px;
+    position: relative;
+    right: -50px;
+    color: white;
+    font-size: 20px;
+}
+
